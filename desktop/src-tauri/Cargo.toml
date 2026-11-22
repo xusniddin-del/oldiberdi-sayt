@@ -1,6 +1,6 @@
 [package]
 name = "oldi-berdi"
-version = "1.1.0"
+version = "1.1.1"
 description = "Oldi-Berdi — qarz daftari"
 edition = "2021"
 

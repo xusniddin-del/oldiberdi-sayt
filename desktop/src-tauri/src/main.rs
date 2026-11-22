@@ -6,7 +6,10 @@ use tauri::webview::DownloadEvent;
 use tauri::{Manager, Url, WebviewUrl, WebviewWindowBuilder};
 use tauri_plugin_opener::OpenerExt;
 
-const APP_HOSTS: [&str; 4] = ["xusniddin-del.github.io", "app.oldiberdi.uz", "oldiberdi.uz", "www.oldiberdi.uz"];
+// ilova manzillari — sayt (oldiberdi.uz, …/oldiberdi-sayt) odatdagi brauzerda ochiladi
+const APP_HOSTS: [&str; 1] = ["app.oldiberdi.uz"];
+const GH_HOST: &str = "xusniddin-del.github.io";
+const GH_APP_PATH: &str = "/oldi-berdi-ilovasi";
 
 // target="_blank" va window.open havolalari ham shu oynadan o'tsin — tashqi havolalarni pastda ushlaymiz
 const INIT_JS: &str = r#"
@@ -23,7 +26,9 @@ fn is_app(url: &Url) -> bool {
         "http" => url.host_str() == Some("tauri.localhost"),
         "https" => {
             let h = url.host_str().unwrap_or("");
-            h == "tauri.localhost" || (APP_HOSTS.contains(&h) && !url.path().ends_with(".apk"))
+            let path = url.path().to_ascii_lowercase();
+            let app_host = APP_HOSTS.contains(&h) || (h == GH_HOST && path.starts_with(GH_APP_PATH));
+            h == "tauri.localhost" || (app_host && !path.ends_with(".apk"))
         }
         _ => false,
     }
