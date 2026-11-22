@@ -8,7 +8,7 @@ Ilovaning o'zi alohida repoda: `xusniddin-del/Oldi-berdi-ilovasi`.
 |---|---|
 | `index.html` | Sayt (bitta fayl). Havolalar faylning pastidagi `CFG` ichida |
 | `img/` | Rasmlar, ilova skrinshotlari |
-| `desktop/` | Windows va Mac dasturi (Electron) — internetdagi ilovani alohida oynada ochadi |
+| `desktop/` | Windows va Mac dasturi (Tauri, ~5–10 MB) — internetdagi ilovani alohida oynada ochadi |
 | `.github/workflows/desktop.yml` | `.exe` va `.dmg` ni GitHub o'zi yig'adi |
 
 ## Sayt qanday yangilanadi
@@ -16,7 +16,7 @@ Ilovaning o'zi alohida repoda: `xusniddin-del/Oldi-berdi-ilovasi`.
 
 ## Kompyuter dasturini chiqarish
 1. **Actions** → **Kompyuter dasturi** → **Run workflow**
-2. Versiyani yozing (masalan `1.0.0`, keyingi safar `1.0.1`) → **Run**
+2. Versiyani yozing (masalan `1.1.0`, keyingi safar `1.1.1`) → **Run**
 3. ~10 daqiqadan keyin **Releases** da `Oldi-Berdi-Setup.exe` va `Oldi-Berdi.dmg` paydo bo'ladi.
    Saytdagi «Yuklab olish» tugmalari doim eng oxirgi versiyani beradi.
 

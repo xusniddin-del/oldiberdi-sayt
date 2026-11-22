@@ -64,8 +64,7 @@ button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
 .pill{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px 6px 6px;font-size:13.5px;font-weight:700;color:var(--muted)}
 .pill b{background:var(--brand);color:#fff;border-radius:999px;padding:3px 10px;font-size:12px}
 h1{font-size:clamp(36px,5.4vw,62px);line-height:1.04;letter-spacing:-.035em;font-weight:800;margin:20px 0 18px}
-h1 em{font-style:normal;color:var(--brand);position:relative;white-space:nowrap}
-h1 em:after{content:"";position:absolute;left:-2px;right:-2px;bottom:.06em;height:.22em;background:var(--lime);z-index:-1;border-radius:4px}
+h1 em{font-style:normal;color:var(--brand);white-space:nowrap;background:linear-gradient(transparent 74%,var(--lime) 74%,var(--lime) 92%,transparent 92%);padding:0 .06em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 .lead{font-size:clamp(17px,1.6vw,19px);color:var(--muted);max-width:540px}
 .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
 .cta .btn{height:56px;padding:0 26px;font-size:16px;border-radius:16px}
@@ -296,9 +295,9 @@ footer a:hover{color:var(--brand)}
 <section class="hero">
  <div class="wrap">
   <div>
-   <span class="pill"><b>Bepul</b>O'zbekcha · ma'lumotlar internetda saqlanadi</span>
-   <h1>Kim sizga qancha qarzdor — <em>daftar yo'qolmaydi</em></h1>
-   <p class="lead">Qarz, nasiya va to'lov muddatlari bitta ilovada. Telefonda yozing — kompyuterda darhol ko'ring. Bitta akkaunt, hamma qurilmada.</p>
+   <span class="pill"><b>Bepul</b>O‘zbekcha · ma’lumotlar internetda saqlanadi</span>
+   <h1>Kim sizga qancha qarzdor — <em>daftar yo‘qolmaydi</em></h1>
+   <p class="lead">Qarz, nasiya va to‘lov muddatlari bitta ilovada. Telefonda yozing — kompyuterda darhol ko‘ring. Bitta akkaunt, hamma qurilmada.</p>
    <div class="cta">
     <a class="btn btn-primary" data-link="app">Bepul boshlash <svg><use href="#i-arrow"/></svg></a>
     <button class="btn btn-ghost" id="hero-dl"><svg><use href="#i-down"/></svg><span>Yuklab olish</span></button>
@@ -308,7 +307,7 @@ footer a:hover{color:var(--brand)}
   <div class="phones" aria-hidden="true">
    <div class="phone a"><img src="img/home.jpg" alt="" width="585" height="1266"></div>
    <div class="phone b"><img src="img/people.jpg" alt="" width="585" height="1266"></div>
-   <div class="float f1"><span class="fi c1"><svg width="20" height="20"><use href="#i-check"/></svg></span><span><b>Akmal aka qaytardi</b><small class="num">+500 000 so'm · bugun</small></span></div>
+   <div class="float f1"><span class="fi c1"><svg width="20" height="20"><use href="#i-check"/></svg></span><span><b>Akmal aka qaytardi</b><small class="num">+500 000 so‘m · bugun</small></span></div>
    <div class="float f2"><span class="fi c4"><svg width="20" height="20"><use href="#i-bell"/></svg></span><span><b>Muddati keldi</b><small>Dilshod · ertaga</small></span></div>
   </div>
  </div>
@@ -316,17 +315,17 @@ footer a:hover{color:var(--brand)}
 
 <div class="strip"><div class="wrap">
  <div class="st"><b>5 ta</b><span>platforma: Android, iPhone, Windows, Mac, brauzer</span></div>
- <div class="st"><b>1 akkaunt</b><span>hamma qurilmada bir xil ma'lumot</span></div>
- <div class="st"><b>0 so'm</b><span>asosiy daftar doim bepul</span></div>
- <div class="st"><b>15 kun</b><span>Premium'ni bepul sinab ko'rish</span></div>
+ <div class="st"><b>1 akkaunt</b><span>hamma qurilmada bir xil ma’lumot</span></div>
+ <div class="st"><b>0 so‘m</b><span>asosiy daftar doim bepul</span></div>
+ <div class="st"><b>15 kun</b><span>Premium’ni bepul sinab ko‘rish</span></div>
 </div></div>
 
 <section>
  <div class="wrap">
-  <div class="head c"><span class="eyebrow">Tanish muammo?</span><h2>Qog'oz daftar ishonchsiz</h2><p class="sub">Qarz berish oson — qaytarib olish qiyin. Oldi-Berdi aynan shu uchun yaratilgan.</p></div>
+  <div class="head c"><span class="eyebrow">Tanish muammo?</span><h2>Qog‘oz daftar ishonchsiz</h2><p class="sub">Qarz berish oson — qaytarib olish qiyin. Oldi-Berdi aynan shu uchun yaratilgan.</p></div>
   <div class="prob">
-   <div class="pc"><div class="em">📒</div><h3>Daftar yo'qoladi</h3><p>Ho'l bo'ladi, yirtiladi, uyda qoladi. Kimga qancha berganingiz u bilan birga yo'qoladi.</p><div class="fix"><svg><use href="#i-check"/></svg>Ma'lumotlar internetda — telefon almashsa ham joyida</div></div>
-   <div class="pc"><div class="em">🤔</div><h3>Esdan chiqadi</h3><p>Qachon bergan edim? Qancha qaytardi? Muddati qachon edi? Bosh ichida hammasini saqlab bo'lmaydi.</p><div class="fix"><svg><use href="#i-check"/></svg>Muddat kelganda ilova va bot o'zi eslatadi</div></div>
+   <div class="pc"><div class="em">📒</div><h3>Daftar yo‘qoladi</h3><p>Ho‘l bo‘ladi, yirtiladi, uyda qoladi. Kimga qancha berganingiz u bilan birga yo‘qoladi.</p><div class="fix"><svg><use href="#i-check"/></svg>Ma’lumotlar internetda — telefon almashsa ham joyida</div></div>
+   <div class="pc"><div class="em">🤔</div><h3>Esdan chiqadi</h3><p>Qachon bergan edim? Qancha qaytardi? Muddati qachon edi? Bosh ichida hammasini saqlab bo‘lmaydi.</p><div class="fix"><svg><use href="#i-check"/></svg>Muddat kelganda ilova va bot o‘zi eslatadi</div></div>
    <div class="pc"><div class="em">😶</div><h3>Eslatish uyat</h3><p>Tanish odamga "qarzingiz bor" deyish noqulay. Natijada pul qaytmaydi.</p><div class="fix"><svg><use href="#i-check"/></svg>Bir bosishda xushmuomala SMS eslatma</div></div>
   </div>
  </div>
@@ -334,16 +333,16 @@ footer a:hover{color:var(--brand)}
 
 <section id="imkoniyatlar" style="padding-top:20px">
  <div class="wrap">
-  <div class="head"><span class="eyebrow">Imkoniyatlar</span><h2>Daftardan ko'ra ko'proq</h2><p class="sub">Asosiy qarz daftari doim bepul. Premium esa biznes va oilaviy hisob-kitob uchun qo'shimcha qulayliklar beradi.</p></div>
+  <div class="head"><span class="eyebrow">Imkoniyatlar</span><h2>Daftardan ko‘ra ko‘proq</h2><p class="sub">Asosiy qarz daftari doim bepul. Premium esa biznes va oilaviy hisob-kitob uchun qo‘shimcha qulayliklar beradi.</p></div>
   <div class="feat-grid">
-   <div class="fc"><span class="ic c1"><svg><use href="#i-book"/></svg></span><h3>Qarz daftari <span class="tag">Bepul</span></h3><p>Berdim, oldim, qaytardi — rasm va izoh bilan. Har bir odam bo'yicha aniq qoldiq.</p></div>
-   <div class="fc"><span class="ic c4"><svg><use href="#i-bell"/></svg></span><h3>Muddat nazorati <span class="tag">Bepul</span></h3><p>Qaysi qarzning muddati o'tgani bosh sahifada ko'rinadi. Telegram bot ertalab eslatadi.</p></div>
+   <div class="fc"><span class="ic c1"><svg><use href="#i-book"/></svg></span><h3>Qarz daftari <span class="tag">Bepul</span></h3><p>Berdim, oldim, qaytardi — rasm va izoh bilan. Har bir odam bo‘yicha aniq qoldiq.</p></div>
+   <div class="fc"><span class="ic c4"><svg><use href="#i-bell"/></svg></span><h3>Muddat nazorati <span class="tag">Bepul</span></h3><p>Qaysi qarzning muddati o‘tgani bosh sahifada ko‘rinadi. Telegram bot ertalab eslatadi.</p></div>
    <div class="fc"><span class="ic c2"><svg><use href="#i-sms"/></svg></span><h3>SMS eslatma <span class="tag p">Premium</span></h3><p>Tayyor, xushmuomala matn bilan qarzdorga bir bosishda SMS yuboring.</p></div>
-   <div class="fc"><span class="ic c3"><svg><use href="#i-cal"/></svg></span><h3>Bo'lib to'lash <span class="tag p">Premium</span></h3><p>Nasiya grafigi: har oy qancha, qaysi kun. Kechikkan to'lovlar qizil bilan.</p></div>
-   <div class="fc"><span class="ic c1"><svg><use href="#i-usd"/></svg></span><h3>Dollar va kurs <span class="tag p">Premium</span></h3><p>Dollarda qarz yozing — Markaziy bank kursi bo'yicha so'mda avtomatik hisoblanadi.</p></div>
-   <div class="fc"><span class="ic c5"><svg><use href="#i-hand"/></svg></span><h3>Ikki tomonlama tasdiq <span class="tag p">Premium</span></h3><p>Qarzdor havola orqali yozuvni tasdiqlaydi — keyin "bunday bo'lmagan" degan gap bo'lmaydi.</p></div>
-   <div class="fc"><span class="ic c2"><svg><use href="#i-cart"/></svg></span><h3>Bozorlik ro'yxati <span class="tag p">Premium</span></h3><p>Qog'ozsiz bozorlik: nima olish kerak, qanchaga oldingiz — hammasi telefonda.</p></div>
-   <div class="fc"><span class="ic c4"><svg><use href="#i-child"/></svg></span><h3>Farzandlar xazinasi <span class="tag p">Premium</span></h3><p>Bolangizga alohida kirish: u tejaydi va orzusi uchun yig'adi, siz kuzatib turasiz.</p></div>
+   <div class="fc"><span class="ic c3"><svg><use href="#i-cal"/></svg></span><h3>Bo‘lib to‘lash <span class="tag p">Premium</span></h3><p>Nasiya grafigi: har oy qancha, qaysi kun. Kechikkan to‘lovlar qizil bilan.</p></div>
+   <div class="fc"><span class="ic c1"><svg><use href="#i-usd"/></svg></span><h3>Dollar va kurs <span class="tag p">Premium</span></h3><p>Dollarda qarz yozing — Markaziy bank kursi bo‘yicha so‘mda avtomatik hisoblanadi.</p></div>
+   <div class="fc"><span class="ic c5"><svg><use href="#i-hand"/></svg></span><h3>Ikki tomonlama tasdiq <span class="tag p">Premium</span></h3><p>Qarzdor havola orqali yozuvni tasdiqlaydi — keyin "bunday bo‘lmagan" degan gap bo‘lmaydi.</p></div>
+   <div class="fc"><span class="ic c2"><svg><use href="#i-cart"/></svg></span><h3>Bozorlik ro‘yxati <span class="tag p">Premium</span></h3><p>Qog‘ozsiz bozorlik: nima olish kerak, qanchaga oldingiz — hammasi telefonda.</p></div>
+   <div class="fc"><span class="ic c4"><svg><use href="#i-child"/></svg></span><h3>Farzandlar xazinasi <span class="tag p">Premium</span></h3><p>Bolangizga alohida kirish: u tejaydi va orzusi uchun yig‘adi, siz kuzatib turasiz.</p></div>
    <div class="fc"><span class="ic c3"><svg><use href="#i-chart"/></svg></span><h3>Hisobot va Excel <span class="tag p">Premium</span></h3><p>Oylik grafiklar, eng katta qarzdorlar, ishonch reytingi va .xlsx fayl.</p></div>
   </div>
  </div>
@@ -353,13 +352,13 @@ footer a:hover{color:var(--brand)}
  <div class="wrap">
   <div class="show">
    <div class="sh-img"><div class="phone"><img src="img/people.jpg" alt="Odamlar ro'yxati" width="585" height="1266"></div></div>
-   <div><span class="eyebrow">Hammasi bir qarashda</span><h2>Kim qancha qarzdor — 2 soniyada</h2><p class="sub">Har bir odam bo'yicha qoldiq, tarix va muddat. Qidiruv va filtr bilan yuzlab mijozni ham oson boshqarasiz.</p>
-    <ul class="checks"><li><i><svg><use href="#i-check"/></svg></i><div><b>Tez yozish</b><span>«Akmalga 500 ming berdim» deb yozing — ilova o'zi tushunadi</span></div></li><li><i><svg><use href="#i-check"/></svg></i><div><b>Kontaktlardan tanlash</b><span>Raqamni qo'lda terish shart emas</span></div></li><li><i><svg><use href="#i-check"/></svg></i><div><b>Ishonch reytingi</b><span>Kim o'z vaqtida qaytarishini ko'rsatadi</span></div></li></ul></div>
+   <div><span class="eyebrow">Hammasi bir qarashda</span><h2>Kim qancha qarzdor — 2 soniyada</h2><p class="sub">Har bir odam bo‘yicha qoldiq, tarix va muddat. Qidiruv va filtr bilan yuzlab mijozni ham oson boshqarasiz.</p>
+    <ul class="checks"><li><i><svg><use href="#i-check"/></svg></i><div><b>Tez yozish</b><span>«Akmalga 500 ming berdim» deb yozing — ilova o‘zi tushunadi</span></div></li><li><i><svg><use href="#i-check"/></svg></i><div><b>Kontaktlardan tanlash</b><span>Raqamni qo‘lda terish shart emas</span></div></li><li><i><svg><use href="#i-check"/></svg></i><div><b>Ishonch reytingi</b><span>Kim o‘z vaqtida qaytarishini ko‘rsatadi</span></div></li></ul></div>
   </div>
   <div class="show rev">
    <div class="sh-img"><div class="phone"><img src="img/list.jpg" alt="Bozorlik ro'yxati" width="585" height="1266"></div></div>
-   <div><span class="eyebrow">Oila uchun ham</span><h2>Bozorlik ro'yxati va bolalar xazinasi</h2><p class="sub">Oldi-Berdi faqat qarz daftari emas. Oilaviy xarajatlar va bolalarni tejashga o'rgatish ham shu yerda.</p>
-    <ul class="checks"><li><i><svg><use href="#i-check"/></svg></i><div><b>Ro'yxat telefonda</b><span>Nima olindi, nima qoldi, qancha sarflandi</span></div></li><li><i><svg><use href="#i-check"/></svg></i><div><b>Bola uchun alohida kirish</b><span>Ism va 4 xonali PIN — o'z sahifasi, o'z orzulari</span></div></li><li><i><svg><use href="#i-check"/></svg></i><div><b>Pul yig'ish</b><span>Do'stlar bilan sovg'a yoki yordam uchun — kim to'ladi, kim yo'q</span></div></li></ul></div>
+   <div><span class="eyebrow">Oila uchun ham</span><h2>Bozorlik ro‘yxati va bolalar xazinasi</h2><p class="sub">Oldi-Berdi faqat qarz daftari emas. Oilaviy xarajatlar va bolalarni tejashga o‘rgatish ham shu yerda.</p>
+    <ul class="checks"><li><i><svg><use href="#i-check"/></svg></i><div><b>Ro‘yxat telefonda</b><span>Nima olindi, nima qoldi, qancha sarflandi</span></div></li><li><i><svg><use href="#i-check"/></svg></i><div><b>Bola uchun alohida kirish</b><span>Ism va 4 xonali PIN — o‘z sahifasi, o‘z orzulari</span></div></li><li><i><svg><use href="#i-check"/></svg></i><div><b>Pul yig‘ish</b><span>Do‘stlar bilan sovg‘a yoki yordam uchun — kim to‘ladi, kim yo‘q</span></div></li></ul></div>
   </div>
  </div>
 </section>
@@ -368,17 +367,17 @@ footer a:hover{color:var(--brand)}
  <div class="wrap">
   <div class="dev-band">
    <div class="dev-top">
-    <div><span class="eyebrow">Hamma qurilmada</span><h2>Telefonda yozing — kompyuterda ko'ring</h2><p class="sub">Bitta raqam va parol bilan istalgan qurilmadan shaxsiy kabinetingizga kirasiz. Ma'lumotlar har doim bir xil, avtomatik sinxronlanadi.</p></div>
+    <div><span class="eyebrow">Hamma qurilmada</span><h2>Telefonda yozing — kompyuterda ko‘ring</h2><p class="sub">Bitta raqam va parol bilan istalgan qurilmadan shaxsiy kabinetingizga kirasiz. Ma’lumotlar har doim bir xil, avtomatik sinxronlanadi.</p></div>
     <div class="desk" aria-hidden="true"><div class="bar"><i></i><i></i><i></i><span>Oldi-Berdi</span></div><div class="scr"><img src="img/home.jpg" alt=""></div></div>
    </div>
    <div class="devices" id="devices">
     <a class="dv" data-dev="android" data-link="apk"><span class="me-tag">Sizning qurilmangiz</span><span class="di"><svg><use href="#i-android"/></svg></span><div><b>Android</b><small>APK fayl · telefon</small></div><span class="go">Yuklab olish <svg><use href="#i-down"/></svg></span></a>
-    <button class="dv" data-dev="ios" data-modal="ios"><span class="me-tag">Sizning qurilmangiz</span><span class="di"><svg><use href="#i-apple"/></svg></span><div><b>iPhone</b><small>Safari orqali · iOS</small></div><span class="go">O'rnatish <svg><use href="#i-arrow"/></svg></span></button>
+    <button class="dv" data-dev="ios" data-modal="ios"><span class="me-tag">Sizning qurilmangiz</span><span class="di"><svg><use href="#i-apple"/></svg></span><div><b>iPhone</b><small>Safari orqali · iOS</small></div><span class="go">O‘rnatish <svg><use href="#i-arrow"/></svg></span></button>
     <button class="dv" data-dev="win" data-modal="win"><span class="me-tag">Sizning qurilmangiz</span><span class="di"><svg><use href="#i-win"/></svg></span><div><b>Windows</b><small>Windows 10 va 11</small></div><span class="go">Yuklab olish <svg><use href="#i-down"/></svg></span></button>
     <button class="dv" data-dev="mac" data-modal="mac"><span class="me-tag">Sizning qurilmangiz</span><span class="di"><svg><use href="#i-apple"/></svg></span><div><b>Mac</b><small>macOS · Intel va M</small></div><span class="go">Yuklab olish <svg><use href="#i-down"/></svg></span></button>
-    <a class="dv" data-dev="web" data-link="app"><span class="me-tag">Sizning qurilmangiz</span><span class="di"><svg><use href="#i-globe"/></svg></span><div><b>Brauzer</b><small>O'rnatmasdan · istalgan kompyuter</small></div><span class="go">Ochish <svg><use href="#i-arrow"/></svg></span></a>
+    <a class="dv" data-dev="web" data-link="app"><span class="me-tag">Sizning qurilmangiz</span><span class="di"><svg><use href="#i-globe"/></svg></span><div><b>Brauzer</b><small>O‘rnatmasdan · istalgan kompyuter</small></div><span class="go">Ochish <svg><use href="#i-arrow"/></svg></span></a>
    </div>
-   <div class="sync"><svg><use href="#i-sync"/></svg>Bir qurilmada yozilgan qarz boshqasida bir necha soniyada paydo bo'ladi</div>
+   <div class="sync"><svg><use href="#i-sync"/></svg>Bir qurilmada yozilgan qarz boshqasida bir necha soniyada paydo bo‘ladi</div>
   </div>
  </div>
 </section>
@@ -387,49 +386,49 @@ footer a:hover{color:var(--brand)}
  <div class="wrap">
   <div class="head c"><span class="eyebrow">Boshlash oson</span><h2>1 daqiqada tayyor</h2></div>
   <div class="steps">
-   <div class="step"><h3>Ro'yxatdan o'ting</h3><p>Ism, telefon raqam va parol. Boshqa hech narsa kerak emas.</p></div>
+   <div class="step"><h3>Ro‘yxatdan o‘ting</h3><p>Ism, telefon raqam va parol. Boshqa hech narsa kerak emas.</p></div>
    <div class="step"><h3>Qarzni yozing</h3><p>Yashil «+» tugmasi → kim, qancha, qachongacha. Tamom.</p></div>
-   <div class="step"><h3>Xotirjam bo'ling</h3><p>Muddat kelganda ilova eslatadi. Istalgan qurilmadan kirib ko'rasiz.</p></div>
+   <div class="step"><h3>Xotirjam bo‘ling</h3><p>Muddat kelganda ilova eslatadi. Istalgan qurilmadan kirib ko‘rasiz.</p></div>
   </div>
  </div>
 </section>
 
 <section id="narxlar" style="padding-top:20px">
  <div class="wrap">
-  <div class="head c"><span class="eyebrow">Narxlar</span><h2>Bepul boshlang, keragida kengaytiring</h2><p class="sub">Asosiy daftar hech qachon pullik bo'lmaydi. Premium'ni 15 kun bepul sinab ko'ring — majburiy emas.</p>
+  <div class="head c"><span class="eyebrow">Narxlar</span><h2>Bepul boshlang, keragida kengaytiring</h2><p class="sub">Asosiy daftar hech qachon pullik bo‘lmaydi. Premium’ni 15 kun bepul sinab ko‘ring — majburiy emas.</p>
    <div class="toggle" role="tablist"><button class="on" data-per="year">Yillik <small>−17%</small></button><button data-per="month">Oylik</button></div></div>
   <div class="plans">
-   <div class="plan"><div class="pn">Bepul</div><div class="pr num">0 <small>so'm</small></div><div class="muted">doim, cheklovsiz</div>
-    <ul><li><svg><use href="#i-check"/></svg>Qarz berdim / oldim / qaytardi</li><li><svg><use href="#i-check"/></svg>Rasm va izoh</li><li><svg><use href="#i-check"/></svg>Muddat nazorati</li><li><svg><use href="#i-check"/></svg>Pul yig'ish</li><li><svg><use href="#i-check"/></svg>PIN va barmoq izi</li><li><svg><use href="#i-check"/></svg>Hamma qurilmada</li></ul>
+   <div class="plan"><div class="pn">Bepul</div><div class="pr num">0 <small>so‘m</small></div><div class="muted">doim, cheklovsiz</div>
+    <ul><li><svg><use href="#i-check"/></svg>Qarz berdim / oldim / qaytardi</li><li><svg><use href="#i-check"/></svg>Rasm va izoh</li><li><svg><use href="#i-check"/></svg>Muddat nazorati</li><li><svg><use href="#i-check"/></svg>Pul yig‘ish</li><li><svg><use href="#i-check"/></svg>PIN va barmoq izi</li><li><svg><use href="#i-check"/></svg>Hamma qurilmada</li></ul>
     <a class="btn btn-ghost" data-link="app">Bepul boshlash</a></div>
-   <div class="plan hot"><div class="pn">💎 Premium</div><div class="pr num" id="pp">588 000 <small>so'm / yil</small></div><div class="muted" id="pp2">oyiga 49 000 so'm</div><span class="save" id="ps">120 000 so'm tejaysiz</span>
-    <ul><li><svg><use href="#i-check"/></svg>Bepuldagi hamma narsa</li><li><svg><use href="#i-check"/></svg>SMS eslatmalar</li><li><svg><use href="#i-check"/></svg>Bo'lib to'lash grafigi</li><li><svg><use href="#i-check"/></svg>Dollar va MB kursi</li><li><svg><use href="#i-check"/></svg>Ikki tomonlama tasdiq</li><li><svg><use href="#i-check"/></svg>Bozorlik ro'yxati, farzandlar xazinasi</li><li><svg><use href="#i-check"/></svg>Hisobot, Excel, rus tili</li></ul>
+   <div class="plan hot"><div class="pn">💎 Premium</div><div class="pr num" id="pp">588 000 <small>so‘m / yil</small></div><div class="muted" id="pp2">oyiga 49 000 so‘m</div><span class="save" id="ps">120 000 so‘m tejaysiz</span>
+    <ul><li><svg><use href="#i-check"/></svg>Bepuldagi hamma narsa</li><li><svg><use href="#i-check"/></svg>SMS eslatmalar</li><li><svg><use href="#i-check"/></svg>Bo‘lib to‘lash grafigi</li><li><svg><use href="#i-check"/></svg>Dollar va MB kursi</li><li><svg><use href="#i-check"/></svg>Ikki tomonlama tasdiq</li><li><svg><use href="#i-check"/></svg>Bozorlik ro‘yxati, farzandlar xazinasi</li><li><svg><use href="#i-check"/></svg>Hisobot, Excel, rus tili</li></ul>
     <a class="btn btn-lime" data-link="botPrem">15 kun bepul sinash</a></div>
-   <div class="plan"><div class="pn">🏪 Biznes</div><div class="pr num">99 000 <small>so'm / oy</small></div><div class="muted">do'konlar va savdogarlar uchun</div>
-    <ul><li><svg><use href="#i-check"/></svg>Premium'dagi hamma narsa</li><li><svg><use href="#i-check"/></svg>Do'kon nomi eslatmalarda</li><li><svg><use href="#i-check"/></svg>Qarzdorlar ro'yxatini yuborish</li><li><svg><use href="#i-check"/></svg>Ko'p mijoz bilan ishlash</li></ul>
+   <div class="plan"><div class="pn">🏪 Biznes</div><div class="pr num">99 000 <small>so‘m / oy</small></div><div class="muted">do‘konlar va savdogarlar uchun</div>
+    <ul><li><svg><use href="#i-check"/></svg>Premium’dagi hamma narsa</li><li><svg><use href="#i-check"/></svg>Do‘kon nomi eslatmalarda</li><li><svg><use href="#i-check"/></svg>Qarzdorlar ro‘yxatini yuborish</li><li><svg><use href="#i-check"/></svg>Ko‘p mijoz bilan ishlash</li></ul>
     <a class="btn btn-ghost" data-link="botPrem">Ulash</a></div>
   </div>
-  <p class="muted" style="text-align:center;margin-top:18px">To'lov Telegram botimiz orqali: Click, Payme, Uzum yoki karta. Premium to'lovdan keyin o'zi yoqiladi.</p>
+  <p class="muted" style="text-align:center;margin-top:18px">To‘lov Telegram botimiz orqali: Click, Payme, Uzum yoki karta. Premium to‘lovdan keyin o‘zi yoqiladi.</p>
  </div>
 </section>
 
 <section id="savollar" style="padding-top:20px">
  <div class="wrap">
-  <div class="head c"><span class="eyebrow">Savollar</span><h2>Ko'p so'raladigan savollar</h2></div>
+  <div class="head c"><span class="eyebrow">Savollar</span><h2>Ko‘p so‘raladigan savollar</h2></div>
   <div class="faq">
-   <details class="q"><summary>Ma'lumotlarim xavfsizmi?</summary><div>Ha. Ma'lumotlar himoyalangan serverda saqlanadi, parolingiz esa ochiq holda saqlanmaydi. Ilovani PIN kod yoki barmoq izi bilan qulflaysiz. Telefon yo'qolsa ham, yangi telefondan raqam va parol bilan kirib, hammasini qaytarib olasiz.</div></details>
-   <details class="q"><summary>Telefon va kompyuterda bir xil ko'rinadimi?</summary><div>Ha. Bitta raqam va parol bilan istalgan qurilmadan kirasiz — <b>Android, iPhone, Windows, Mac</b> yoki oddiy brauzer. Bir joyda yozilgan qarz boshqasida bir necha soniyada paydo bo'ladi.</div></details>
-   <details class="q"><summary>Windows'da "Windows protected your PC" chiqdi — nima qilay?</summary><div>Bu yangi dasturlarda chiqadigan oddiy ogohlantirish. <b>«Подробнее / More info»</b> ni bosing, keyin <b>«Выполнить в любом случае / Run anyway»</b> ni bosing. Bu faqat birinchi o'rnatishda bo'ladi.</div></details>
-   <details class="q"><summary>Mac'da dastur ochilmayapti — nima qilay?</summary><div>Birinchi marta dasturni <b>sichqonchaning o'ng tugmasi</b> (yoki Control + bosish) bilan bosing va <b>«Открыть / Open»</b> ni tanlang. Agar baribir ochilmasa: <b>System Settings → Privacy & Security</b> → pastda <b>«Open Anyway»</b>. Keyingi safar oddiy ochiladi.</div></details>
-   <details class="q"><summary>Internet bo'lmasa ishlaydimi?</summary><div>Ilova oxirgi ma'lumotlarni telefonda saqlaydi, shuning uchun internet bo'lmasa ham ko'rasiz. Yangi yozuvlar internet qaytishi bilan serverga yuboriladi.</div></details>
-   <details class="q"><summary>Premium tugasa ma'lumotlarim o'chib ketadimi?</summary><div>Yo'q. Premium tugasa ilova bepul rejimda ishlashda davom etadi — barcha qarzlar va yozuvlar joyida qoladi. Faqat Premium imkoniyatlar yopiladi.</div></details>
-   <details class="q"><summary>Qanday to'layman?</summary><div>Telegram botimizda «💎 Premium» tugmasini bosing, tarifni tanlang va Click, Payme, Uzum yoki karta orqali to'lang. Premium to'lov tushishi bilan o'zi yoqiladi.</div></details>
+   <details class="q"><summary>Ma’lumotlarim xavfsizmi?</summary><div>Ha. Ma’lumotlar himoyalangan serverda saqlanadi, parolingiz esa ochiq holda saqlanmaydi. Ilovani PIN kod yoki barmoq izi bilan qulflaysiz. Telefon yo‘qolsa ham, yangi telefondan raqam va parol bilan kirib, hammasini qaytarib olasiz.</div></details>
+   <details class="q"><summary>Telefon va kompyuterda bir xil ko‘rinadimi?</summary><div>Ha. Bitta raqam va parol bilan istalgan qurilmadan kirasiz — <b>Android, iPhone, Windows, Mac</b> yoki oddiy brauzer. Bir joyda yozilgan qarz boshqasida bir necha soniyada paydo bo‘ladi.</div></details>
+   <details class="q"><summary>Windows’da "Windows protected your PC" chiqdi — nima qilay?</summary><div>Bu yangi dasturlarda chiqadigan oddiy ogohlantirish. <b>«Подробнее / More info»</b> ni bosing, keyin <b>«Выполнить в любом случае / Run anyway»</b> ni bosing. Bu faqat birinchi o‘rnatishda bo‘ladi.</div></details>
+   <details class="q"><summary>Mac’da dastur ochilmayapti — nima qilay?</summary><div>Birinchi marta dasturni <b>sichqonchaning o‘ng tugmasi</b> (yoki Control + bosish) bilan bosing va <b>«Открыть / Open»</b> ni tanlang. Agar baribir ochilmasa: <b>System Settings → Privacy & Security</b> → pastda <b>«Open Anyway»</b>. Keyingi safar oddiy ochiladi.</div></details>
+   <details class="q"><summary>Internet bo‘lmasa ishlaydimi?</summary><div>Ilova oxirgi ma’lumotlarni telefonda saqlaydi, shuning uchun internet bo‘lmasa ham ko‘rasiz. Yangi yozuvlar internet qaytishi bilan serverga yuboriladi.</div></details>
+   <details class="q"><summary>Premium tugasa ma’lumotlarim o‘chib ketadimi?</summary><div>Yo‘q. Premium tugasa ilova bepul rejimda ishlashda davom etadi — barcha qarzlar va yozuvlar joyida qoladi. Faqat Premium imkoniyatlar yopiladi.</div></details>
+   <details class="q"><summary>Qanday to‘layman?</summary><div>Telegram botimizda «💎 Premium» tugmasini bosing, tarifni tanlang va Click, Payme, Uzum yoki karta orqali to‘lang. Premium to‘lov tushishi bilan o‘zi yoqiladi.</div></details>
   </div>
  </div>
 </section>
 
 <section style="padding-top:20px">
- <div class="wrap"><div class="final"><h2>Daftarni telefoningizga ko'chiring</h2><p class="sub">Bugun boshlang — birinchi qarzni yozish bir daqiqa ham olmaydi.</p>
+ <div class="wrap"><div class="final"><h2>Daftarni telefoningizga ko‘chiring</h2><p class="sub">Bugun boshlang — birinchi qarzni yozish bir daqiqa ham olmaydi.</p>
   <div class="cta"><a class="btn btn-lime" data-link="app">Bepul boshlash <svg><use href="#i-arrow"/></svg></a><a class="btn btn-ghost" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.25)" data-link="bot"><svg><use href="#i-tg"/></svg>Telegram bot</a></div></div></div>
 </section>
 </main>

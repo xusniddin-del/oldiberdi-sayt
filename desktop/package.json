@@ -1,38 +1,12 @@
 {
-  "name": "oldi-berdi",
-  "productName": "Oldi-Berdi",
-  "version": "1.0.0",
-  "description": "Oldi-Berdi — qarz daftari (kompyuter uchun)",
-  "author": "Oldi-Berdi",
-  "main": "main.js",
+  "name": "oldi-berdi-desktop",
   "private": true,
+  "version": "1.1.0",
   "scripts": {
-    "start": "electron .",
-    "dist:win": "electron-builder --win nsis --x64 --publish never",
-    "dist:mac": "electron-builder --mac dmg --universal --publish never",
-    "dist:linux": "electron-builder --linux dir --publish never"
-  },
-  "build": {
-    "appId": "uz.oldiberdi.app",
-    "productName": "Oldi-Berdi",
-    "copyright": "© Oldi-Berdi",
-    "files": ["main.js", "offline.html", "build/icon.png"],
-    "directories": { "output": "dist", "buildResources": "build" },
-    "win": { "target": "nsis", "icon": "build/icon.png", "artifactName": "Oldi-Berdi-Setup.${ext}" },
-    "nsis": {
-      "oneClick": true,
-      "perMachine": false,
-      "createDesktopShortcut": "always",
-      "createStartMenuShortcut": true,
-      "shortcutName": "Oldi-Berdi",
-      "runAfterFinish": true,
-      "deleteAppDataOnUninstall": false
-    },
-    "mac": { "target": "dmg", "icon": "build/icon.png", "category": "public.app-category.finance", "artifactName": "Oldi-Berdi.${ext}", "identity": null },
-    "dmg": { "title": "Oldi-Berdi", "artifactName": "Oldi-Berdi.${ext}" }
+    "tauri": "tauri",
+    "icons": "tauri icon build/icon.png"
   },
   "devDependencies": {
-    "electron": "^33.2.1",
-    "electron-builder": "^25.1.8"
+    "@tauri-apps/cli": "^2"
   }
 }
