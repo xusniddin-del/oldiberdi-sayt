@@ -1,7 +1,7 @@
 {
   "name": "oldi-berdi-legacy",
   "productName": "Oldi-Berdi",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Oldi-Berdi — qarz daftari (Windows 7, 8, 8.1)",
   "author": "Oldi-Berdi",
   "main": "main.js",

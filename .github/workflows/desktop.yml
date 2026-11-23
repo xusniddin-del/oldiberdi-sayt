@@ -57,12 +57,29 @@ jobs:
           body: |
             Oldi-Berdi kompyuter dasturi.
             • Windows 10, 11: Oldi-Berdi-Setup.exe
-            • Windows 7, 8, 8.1: Oldi-Berdi-Setup-Win7-64bit.exe yoki -32bit.exe
+            • Windows 7, 8, 8.1: Oldi-Berdi-Setup-Win7.exe (yengil, Chrome/Yandex kerak) yoki to'liq versiya -Win7-64bit / -32bit.exe
             • Mac: Oldi-Berdi.dmg
           files: desktop/out/${{ matrix.out }}
           make_latest: true
 
-  # Windows 7, 8, 8.1 uchun (Electron 22) — 64 va 32 bitli o'rnatuvchilar
+  # Windows 7, 8, 8.1 — yengil o'rnatuvchi (~200 KB): kompyuterdagi Chrome/Yandex/Edge'da ilovani alohida oynada ochadi
+  win7-light:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: desktop-win7
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update -q && sudo apt-get install -y -q nsis
+      - run: makensis -V2 -DVERSION=${{ inputs.version }} oldiberdi.nsi && ls -la *.exe
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ inputs.version }}
+          name: Oldi-Berdi ${{ inputs.version }}
+          files: desktop-win7/Oldi-Berdi-Setup-Win7.exe
+          make_latest: true
+
+  # Windows 7, 8, 8.1 — to'liq versiya (Electron 22, ~60 MB): brauzer bo'lmagan kompyuterlar uchun
   legacy:
     runs-on: windows-latest
     defaults:
