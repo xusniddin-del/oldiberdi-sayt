@@ -153,8 +153,8 @@ h2{font-size:clamp(28px,3.6vw,44px);line-height:1.1;letter-spacing:-.03em;font-w
 .desk .bar{height:34px;display:flex;align-items:center;gap:7px;padding:0 13px;background:#16291e;color:rgba(255,255,255,.6);font-size:12px;font-weight:600}
 .desk .bar i{width:11px;height:11px;border-radius:50%;background:#ff5f57}.desk .bar i:nth-child(2){background:#febc2e}.desk .bar i:nth-child(3){background:#28c840}
 .desk .bar span{margin-left:10px}
-.desk .scr{display:flex;justify-content:center;background:#edf5ef;height:380px;overflow:hidden}
-.desk .scr img{width:46%;height:auto;align-self:flex-start;box-shadow:0 0 0 1px #dce8df}
+.desk .scr{background:#edf5ef;overflow:hidden;line-height:0}
+.desk .scr img{width:100%;height:auto}
 .devices{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:44px;position:relative}
 .dv{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:22px;padding:20px 16px;text-align:left;color:#fff;display:flex;flex-direction:column;gap:12px;transition:background .2s,transform .2s;min-height:178px}
 .dv:hover{background:rgba(255,255,255,.14);transform:translateY(-3px)}
@@ -266,7 +266,7 @@ footer a:hover{color:var(--brand)}
   .devices{grid-template-columns:1fr 1fr}
   .dv{min-height:150px}
   .dev-band{padding:36px 20px;border-radius:28px}
-  .desk .scr{height:300px}
+  .desk .scr{height:auto}
   .final{padding:44px 22px;border-radius:28px}
   .cta .btn{flex:1}
   footer .wrap{grid-template-columns:1fr}
@@ -382,7 +382,7 @@ footer a:hover{color:var(--brand)}
   <div class="dev-band">
    <div class="dev-top">
     <div><span class="eyebrow">Hamma qurilmada</span><h2>Telefonda yozing — kompyuterda ko‘ring</h2><p class="sub">Bitta raqam va parol bilan istalgan qurilmadan shaxsiy kabinetingizga kirasiz. Ma’lumotlar har doim bir xil, avtomatik sinxronlanadi.</p></div>
-    <div class="desk" aria-hidden="true"><div class="bar"><i></i><i></i><i></i><span>Oldi-Berdi</span></div><div class="scr"><img src="img/home.jpg" alt=""></div></div>
+    <div class="desk" aria-hidden="true"><div class="bar"><i></i><i></i><i></i><span>Oldi-Berdi</span></div><div class="scr"><img src="img/desk.jpg" alt="Oldi-Berdi kompyuterda" width="1280" height="800"></div></div>
    </div>
    <div class="devices" id="devices">
     <a class="dv" data-dev="android" data-link="apk"><span class="me-tag">Sizning qurilmangiz</span><span class="di"><svg><use href="#i-android"/></svg></span><div><b>Android</b><small>APK fayl · telefon</small></div><span class="go">Yuklab olish <svg><use href="#i-down"/></svg></span></a>
