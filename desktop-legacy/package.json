@@ -1,0 +1,26 @@
+{
+  "name": "oldi-berdi-legacy",
+  "productName": "Oldi-Berdi",
+  "version": "1.2.0",
+  "description": "Oldi-Berdi — qarz daftari (Windows 7, 8, 8.1)",
+  "author": "Oldi-Berdi",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "dist:x64": "electron-builder --win nsis --x64 --publish never",
+    "dist:ia32": "electron-builder --win nsis --ia32 --publish never"
+  },
+  "build": {
+    "appId": "uz.oldiberdi.legacy",
+    "productName": "Oldi-Berdi",
+    "copyright": "© Oldi-Berdi",
+    "files": ["main.js", "offline.html", "build/icon.png"],
+    "directories": { "output": "dist", "buildResources": "build" },
+    "win": { "target": "nsis", "icon": "build/icon.png", "artifactName": "Oldi-Berdi-Win7-${arch}.${ext}" },
+    "nsis": { "oneClick": true, "perMachine": false, "createDesktopShortcut": "always", "createStartMenuShortcut": true, "shortcutName": "Oldi-Berdi", "runAfterFinish": true, "deleteAppDataOnUninstall": false }
+  },
+  "devDependencies": {
+    "electron": "22.3.27",
+    "electron-builder": "24.13.3"
+  }
+}

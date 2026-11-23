@@ -56,7 +56,43 @@ jobs:
           name: Oldi-Berdi ${{ inputs.version }}
           body: |
             Oldi-Berdi kompyuter dasturi.
-            • Windows: Oldi-Berdi-Setup.exe
+            • Windows 10, 11: Oldi-Berdi-Setup.exe
+            • Windows 7, 8, 8.1: Oldi-Berdi-Setup-Win7-64bit.exe yoki -32bit.exe
             • Mac: Oldi-Berdi.dmg
           files: desktop/out/${{ matrix.out }}
+          make_latest: true
+
+  # Windows 7, 8, 8.1 uchun (Electron 22) — 64 va 32 bitli o'rnatuvchilar
+  legacy:
+    runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: desktop-legacy
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - run: npm version ${{ inputs.version }} --no-git-tag-version --allow-same-version
+      - run: npm run dist:x64
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: 'false'
+      - run: npm run dist:ia32
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: 'false'
+      - name: Faylni nomlash
+        run: |
+          mkdir -p out
+          cp dist/Oldi-Berdi-Win7-x64.exe out/Oldi-Berdi-Setup-Win7-64bit.exe
+          cp dist/Oldi-Berdi-Win7-ia32.exe out/Oldi-Berdi-Setup-Win7-32bit.exe
+          ls -la out
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ inputs.version }}
+          name: Oldi-Berdi ${{ inputs.version }}
+          files: |
+            desktop-legacy/out/Oldi-Berdi-Setup-Win7-64bit.exe
+            desktop-legacy/out/Oldi-Berdi-Setup-Win7-32bit.exe
           make_latest: true
